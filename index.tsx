@@ -61,3 +61,33 @@ const addArrow = (num1: number, num2: number, num3: number): number => {
   return num1 + num2 + num3;
 };
 console.log(addArrow(2, 1, 3));
+
+//type alias الاسم المستعار
+type st = string;
+let theName2: st = "sasa";
+
+type Buttons = {
+  up: string;
+  down: string;
+  left: string;
+  right: string;
+};
+
+type Last = Buttons & {
+  x: boolean;
+};
+function getActions(btns: Last) {
+  console.log(`action for button up is ${btns.up}`);
+  console.log(`action for button down is ${btns.down}`);
+  console.log(`action for button left is ${btns.left}`);
+  console.log(`action for button right is ${btns.right}`);
+}
+console.log(
+  getActions({
+    up: "jumb",
+    down: "down",
+    right: "right",
+    left: "left",
+    x: true,
+  })
+);
