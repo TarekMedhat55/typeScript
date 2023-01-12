@@ -259,3 +259,41 @@ console.log(userOne.salary);
 console.log("====================================");
 console.log(userOne.msg);
 console.log("====================================");
+
+///Generics Introduction
+/**
+ * help to write a reusable code
+ * allow to pass type as a parameter to another type
+ * you will be able to deal with multiple types without using any
+ * we can create
+ * generic classes
+ * generic function,methods and interface
+ */
+function returnNumber(val: number): number {
+  return val;
+}
+function returnString(val: string): string {
+  return val;
+}
+function returnBoolean(val: boolean): boolean {
+  return val;
+}
+
+console.log("====================================");
+console.log(returnNumber(44));
+console.log("====================================");
+console.log(returnString("hello"));
+console.log("====================================");
+console.log(returnBoolean(true));
+console.log("====================================");
+
+function returnType<GenericType>(val: GenericType): GenericType {
+  return val;
+}
+console.log("====================================");
+console.log(returnType<number>(44));
+console.log("====================================");
+console.log(returnType<string>("hello"));
+console.log("====================================");
+console.log(returnType<boolean>(true));
+console.log("====================================");
